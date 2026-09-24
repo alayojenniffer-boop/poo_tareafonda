@@ -32,7 +32,7 @@ public abstract class Bebida {
         return stock;
     }
     public void setStock(int stock){
-        if (stock > 0 ){
+        if (stock <= 0 ){
             throw new IllegalArgumentException("El stock no puede ser negativo o cero");
 
         }
