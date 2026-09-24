@@ -39,24 +39,23 @@ public class BebidaAlcoholica extends Bebida implements ConsumoResponsable{
 
     @Override
     public String obtenerDetalle() {
-        return "Tipo: Bebida Alcoholica" + " | Nombre: " + getNombre() + " | Volumen: " + getVolumenML() + " ml" + " | Stock: " + getStock() + " | Grados: " + gradosAlcohol + " | Certificada: " + (certificada ? "Si" : "No") + "\n  Venta restringida: " + (ventaRestringida ? "Si" : "No") + " | Precio: $" + (int) calcularPrecio();
+        return "Tipo:" + bebidaAlcoholica + "Nombre:" + getNombre() + "Volumen:" + getVolumenML() + "ml" + "Stock:" + getStock() + "Grados:" + gradosAlcohol + "Certificada" + certificada + "\n Venta restringida:" + ventaRestringida;
 
     }
 
     @Override
     public boolean tieneVentaRestringida() {
-        return ventaRestringida;
-    }
-    @Override
-    public boolean restringirVenta() {
-        this.ventaRestringida = true;
         return false;
     }
+
     @Override
-    public boolean superaLimite(int unidades) {
-        return unidades > LIMITE_UNIDADES_POR_CLIENTE;
+    public boolean restringirVenta() {
+        return this.certificada = certificada;
+
     }
 
-
-
+    @Override
+    public boolean superaLimite(int unidades) {
+        return false;
+    }
 }
