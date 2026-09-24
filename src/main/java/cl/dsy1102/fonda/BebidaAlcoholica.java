@@ -39,7 +39,7 @@ public class BebidaAlcoholica extends Bebida implements ConsumoResponsable{
 
     @Override
     public String obtenerDetalle() {
-        return "Tipo:" + bebidaAlcoholica + "Nombre:" + getNombre() + "Volumen:" + getVolumenML() + "ml" + "Stock:" + getStock() + "Grados:" + gradosAlcohol + "Certificada" + certificada + "\n Venta restringida:" + ventaRestringida;
+        return "Tipo:" + "bebida Alcoholica" + "Nombre:" + getNombre() + "Volumen:" + getVolumenML() + "ml" + "Stock:" + getStock() + "Grados:" + gradosAlcohol + "Certificada" + certificada + "\n Venta restringida:" + ventaRestringida;
 
     }
 
